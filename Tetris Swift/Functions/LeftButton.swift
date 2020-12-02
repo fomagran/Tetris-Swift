@@ -46,12 +46,15 @@ class LeftButton {
     //움직일 수 있는지 판단하는 함수
     func isMovable() -> Bool {
         
-        //블록 중 가장 좌측에 있는 x값 찾아내기
-        let left = Variables.brickArrays.sorted { $0.x < $1.x}.first?.x
-
-        //가장 좌측에 있는 값 바로 왼쪽에 있는 x값
-        let xValue = Int(left ?? 0) + Variables.dx - 1
-        return Variables.backArrays[Variables.dy][xValue] != 0 ? false : true
+        //블록의 x바로 옆이 2가 아닌지 확인
+        for item in Variables.brickArrays {
+            let x = Int(item.x) + Variables.dx
+            let y = Int(item.y) + Variables.dy
+            if Variables.backArrays[y][x-1] == 2 {
+               return false
+            }
+        }
+        return true
     }
     
     //왼쪽 버튼 눌렀을 때 애니메이션

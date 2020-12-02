@@ -11,6 +11,9 @@ import SpriteKit
 class BrickGenerator {
     let brickValue = Variables.brickValue
     init() {
+        Variables.dx = 4
+        Variables.dy = 2
+        Variables.brickValue = RandomBrick().randomBrick()
         let brick = brickValue.points
         Variables.brickArrays = brick
         Variables.brickNode.removeAll()

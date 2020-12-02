@@ -36,7 +36,7 @@ class RandomBrick {
         bricks.append(Brick(color: .green, points: brick3,brickName: "brick3"))
         
         var brick4 = [CGPoint]()
-        brick4.append(CGPoint(x: -1, y: 1))
+        brick4.append(CGPoint(x: 0, y: 0))
         brick4.append(CGPoint(x: -1, y: 0))
         brick4.append(CGPoint(x: 0, y: 1))
         brick4.append(CGPoint(x: 1, y: 0))
