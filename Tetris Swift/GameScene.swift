@@ -12,6 +12,7 @@ class GameScene: SKScene {
     
     var leftBtn:LeftButton?
     var rightBtn:RightButton?
+    var rotationBtn:RotationButton?
 
     override func didMove(to view: SKView) {
         
@@ -21,6 +22,7 @@ class GameScene: SKScene {
         
         leftBtn = LeftButton()
         rightBtn = RightButton()
+        rotationBtn = RotationButton()
     }
 
     override  func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -32,6 +34,8 @@ class GameScene: SKScene {
                 leftBtn?.brickMoveLeft()
             }else if item.name == "right" {
                 rightBtn?.brickMoveRight()
+            }else if item.name == "rotation" {
+                rotationBtn?.brickRotation()
             }
         }
     }

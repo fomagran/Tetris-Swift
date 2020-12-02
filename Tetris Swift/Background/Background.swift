@@ -29,19 +29,19 @@ class BackGround {
     //벽 만들어주기
     func configureWall() {
         for i in 0..<row {
-            Variables.backArrays[col-1][i] = 1
+            Variables.backArrays[col-1][i] = 2
             Variables.scene.addChild(setWall(x: i, y: col-1))
         }
         for i in 0..<col-1 {
-            Variables.backArrays[i][0] = 1
+            Variables.backArrays[i][0] = 2
             Variables.scene.addChild(setWall(x: 0, y: i))
         }
         for i in 0..<col-1 {
-            Variables.backArrays[i][row-1] = 1
+            Variables.backArrays[i][row-1] = 2
             Variables.scene.addChild(setWall(x: row-1, y: i))
         }
         for i in 0..<row {
-            Variables.backArrays[0][i] = 1
+            Variables.backArrays[0][i] = 2
             Variables.scene.addChild(setWall(x: i, y: 0))
         }
     }
