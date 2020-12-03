@@ -12,6 +12,7 @@
 		046FB167257887500066D9F0 /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FB166257887500066D9F0 /* GameOver.swift */; };
 		046FB16F257887BF0066D9F0 /* GameOver.sks in Resources */ = {isa = PBXBuildFile; fileRef = 046FB16E257887BF0066D9F0 /* GameOver.sks */; };
 		046FB172257889D80066D9F0 /* StopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FB171257889D80066D9F0 /* StopButton.swift */; };
+		046FB177257890520066D9F0 /* NextBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FB176257890520066D9F0 /* NextBrick.swift */; };
 		04CE0E942574AEAF0048846C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE0E932574AEAF0048846C /* AppDelegate.swift */; };
 		04CE0E9A2574AEAF0048846C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE0E992574AEAF0048846C /* GameScene.swift */; };
 		04CE0E9C2574AEAF0048846C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE0E9B2574AEAF0048846C /* GameViewController.swift */; };
@@ -32,6 +33,7 @@
 		046FB166257887500066D9F0 /* GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
 		046FB16E257887BF0066D9F0 /* GameOver.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOver.sks; sourceTree = "<group>"; };
 		046FB171257889D80066D9F0 /* StopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopButton.swift; sourceTree = "<group>"; };
+		046FB176257890520066D9F0 /* NextBrick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextBrick.swift; sourceTree = "<group>"; };
 		04CE0E902574AEAF0048846C /* Tetris Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tetris Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CE0E932574AEAF0048846C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04CE0E992574AEAF0048846C /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -89,7 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				046FB169257887550066D9F0 /* Scene */,
-				04FF045E2575F20F009BF942 /* ButtonsFunction */,
+				04FF045E2575F20F009BF942 /* ButtonsFunctions */,
 				04CE0EBA2574B67F0048846C /* Model */,
 				04CE0EAF2574B0090048846C /* Variables */,
 				04CE0EAA2574AF6B0048846C /* Background */,
@@ -108,6 +110,7 @@
 				04CE0EAB2574AF7C0048846C /* Background.swift */,
 				04CE0EB42574B0A40048846C /* RandomBrick.swift */,
 				04CE0EB72574B38C0048846C /* BrickGenerator.swift */,
+				046FB176257890520066D9F0 /* NextBrick.swift */,
 			);
 			path = Background;
 			sourceTree = "<group>";
@@ -128,7 +131,7 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		04FF045E2575F20F009BF942 /* ButtonsFunction */ = {
+		04FF045E2575F20F009BF942 /* ButtonsFunctions */ = {
 			isa = PBXGroup;
 			children = (
 				04FF045F2575F22A009BF942 /* LeftButton.swift */,
@@ -137,7 +140,7 @@
 				046C4EFE257746B90049CDF4 /* DownButton.swift */,
 				046FB171257889D80066D9F0 /* StopButton.swift */,
 			);
-			path = ButtonsFunction;
+			path = ButtonsFunctions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +225,7 @@
 				046C4EFF257746B90049CDF4 /* DownButton.swift in Sources */,
 				04CE0EB82574B38C0048846C /* BrickGenerator.swift in Sources */,
 				04CE0EAC2574AF7C0048846C /* Background.swift in Sources */,
+				046FB177257890520066D9F0 /* NextBrick.swift in Sources */,
 				04CE0EB12574B0190048846C /* Variables.swift in Sources */,
 				04CE0EB52574B0A40048846C /* RandomBrick.swift in Sources */,
 			);

@@ -20,4 +20,6 @@ struct Variables {
     static var brickNode = Array<SKSpriteNode>()
     static var blockedArrays = Array<SKSpriteNode>()
     static var isPause = false
+    static var nodeGroup = [[SKSpriteNode]]()
+    static var newBrickArray = [Brick]()
 }

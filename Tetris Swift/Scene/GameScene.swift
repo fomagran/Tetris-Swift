@@ -20,8 +20,9 @@ class GameScene: SKScene {
     override func didMove(to view: SKView) {
         
         Variables.scene = self
-        let bg = BackGround()
-        let generator = BrickGenerator()
+        _ = BackGround()
+        NextBrick().addBrick()
+        _ = BrickGenerator()
         
         leftBtn = LeftButton()
         rightBtn = RightButton()

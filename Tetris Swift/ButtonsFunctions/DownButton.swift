@@ -17,7 +17,6 @@ class DownButton {
         btn.texture = SKTexture(imageNamed: "down_btn1")
         btn.size = CGSize(width: 50, height: 50)
         btn.name = "down"
-        btn.zPosition = 1
         let point1 = 50
         let point2 = Int(Variables.scene.frame.width)/2
         let xValue = point1 + (point2 - point1)/2
@@ -126,6 +125,7 @@ class DownButton {
         }
         if isGameOver(deadLine: Variables.dy) {
         //블록 새로 생성
+            NextBrick().nextBrickMoveLeft()
         _ = BrickGenerator()
         }
     }
