@@ -14,6 +14,7 @@ class GameScene: SKScene {
     var rightBtn:RightButton?
     var rotationBtn:RotationButton?
     var downBtn : DownButton?
+    var stopBtn:StopButton?
     var updateTime = 0.0
 
     override func didMove(to view: SKView) {
@@ -26,6 +27,7 @@ class GameScene: SKScene {
         rightBtn = RightButton()
         rotationBtn = RotationButton()
         downBtn = DownButton()
+        stopBtn = StopButton()
     }
     
     //1초 단위로 블록 내리기
@@ -35,9 +37,12 @@ class GameScene: SKScene {
             }
         if currentTime - updateTime > 1 {
             updateTime = currentTime
+            if !Variables.isPause {
             downBtn?.brickDown()
+            }
         }
     }
+    
 
     override  func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
@@ -55,6 +60,8 @@ class GameScene: SKScene {
                 while (downBtn?.isDownable())! {
                     downBtn?.brickDown()
                 }
+            }else if item.name == "stop" {
+                stopBtn?.brickStop()
             }
         }
     }

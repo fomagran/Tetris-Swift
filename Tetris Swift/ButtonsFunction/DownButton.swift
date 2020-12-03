@@ -18,7 +18,10 @@ class DownButton {
         btn.size = CGSize(width: 50, height: 50)
         btn.name = "down"
         btn.zPosition = 1
-        btn.position = CGPoint(x: Int(Variables.scene.frame.width)/4, y: -Int(Variables.scene.frame.height - 20))
+        let point1 = 50
+        let point2 = Int(Variables.scene.frame.width)/2
+        let xValue = point1 + (point2 - point1)/2
+        btn.position = CGPoint(x: xValue, y: -Int(Variables.scene.frame.height - 20))
         Variables.scene.addChild(btn)
     }
     //MARK: Actions
@@ -121,8 +124,10 @@ class DownButton {
             }
             
         }
+        if isGameOver(deadLine: Variables.dy) {
         //블록 새로 생성
         _ = BrickGenerator()
+        }
     }
     
     //다운 버튼 눌렀을 때 애니메이션
@@ -135,5 +140,17 @@ class DownButton {
         }
         let action = SKAction.animate(with: textures, timePerFrame: 0.03)
         btn.run(action)
+    }
+    
+    func isGameOver(deadLine:Int) -> Bool {
+        if deadLine > 2 {
+            return true
+        }else {
+            if let scene = GameOver(fileNamed: "GameOver") {
+                let transition = SKTransition.moveIn(with: .right, duration: 1)
+                Variables.scene.view?.presentScene(scene,transition: transition)
+            }
+            return false
+        }
     }
 }
