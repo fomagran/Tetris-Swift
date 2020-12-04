@@ -13,6 +13,13 @@
 		046FB16F257887BF0066D9F0 /* GameOver.sks in Resources */ = {isa = PBXBuildFile; fileRef = 046FB16E257887BF0066D9F0 /* GameOver.sks */; };
 		046FB172257889D80066D9F0 /* StopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FB171257889D80066D9F0 /* StopButton.swift */; };
 		046FB177257890520066D9F0 /* NextBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FB176257890520066D9F0 /* NextBrick.swift */; };
+		04A22F712579FC7A00DCEF55 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A22F702579FC7A00DCEF55 /* Sound.swift */; };
+		04A22F7A2579FCB700DCEF55 /* rotation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04A22F752579FCB700DCEF55 /* rotation.mp3 */; };
+		04A22F7B2579FCB700DCEF55 /* down.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04A22F762579FCB700DCEF55 /* down.mp3 */; };
+		04A22F7C2579FCB700DCEF55 /* bg_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04A22F772579FCB700DCEF55 /* bg_sound.mp3 */; };
+		04A22F7D2579FCB700DCEF55 /* delete.wav in Resources */ = {isa = PBXBuildFile; fileRef = 04A22F782579FCB700DCEF55 /* delete.wav */; };
+		04A22F7E2579FCB700DCEF55 /* move.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04A22F792579FCB700DCEF55 /* move.mp3 */; };
+		04A22F81257A001500DCEF55 /* Fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 04A22F80257A001500DCEF55 /* Fire.sks */; };
 		04CE0E942574AEAF0048846C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE0E932574AEAF0048846C /* AppDelegate.swift */; };
 		04CE0E9A2574AEAF0048846C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE0E992574AEAF0048846C /* GameScene.swift */; };
 		04CE0E9C2574AEAF0048846C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE0E9B2574AEAF0048846C /* GameViewController.swift */; };
@@ -34,6 +41,13 @@
 		046FB16E257887BF0066D9F0 /* GameOver.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOver.sks; sourceTree = "<group>"; };
 		046FB171257889D80066D9F0 /* StopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopButton.swift; sourceTree = "<group>"; };
 		046FB176257890520066D9F0 /* NextBrick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextBrick.swift; sourceTree = "<group>"; };
+		04A22F702579FC7A00DCEF55 /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		04A22F752579FCB700DCEF55 /* rotation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rotation.mp3; sourceTree = "<group>"; };
+		04A22F762579FCB700DCEF55 /* down.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = down.mp3; sourceTree = "<group>"; };
+		04A22F772579FCB700DCEF55 /* bg_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bg_sound.mp3; sourceTree = "<group>"; };
+		04A22F782579FCB700DCEF55 /* delete.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = delete.wav; sourceTree = "<group>"; };
+		04A22F792579FCB700DCEF55 /* move.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = move.mp3; sourceTree = "<group>"; };
+		04A22F80257A001500DCEF55 /* Fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Fire.sks; sourceTree = "<group>"; };
 		04CE0E902574AEAF0048846C /* Tetris Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tetris Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CE0E932574AEAF0048846C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04CE0E992574AEAF0048846C /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -71,6 +85,19 @@
 			path = Scene;
 			sourceTree = "<group>";
 		};
+		04A22F742579FCA400DCEF55 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				04A22F702579FC7A00DCEF55 /* Sound.swift */,
+				04A22F772579FCB700DCEF55 /* bg_sound.mp3 */,
+				04A22F782579FCB700DCEF55 /* delete.wav */,
+				04A22F762579FCB700DCEF55 /* down.mp3 */,
+				04A22F792579FCB700DCEF55 /* move.mp3 */,
+				04A22F752579FCB700DCEF55 /* rotation.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		04CE0E872574AEAF0048846C = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +117,7 @@
 		04CE0E922574AEAF0048846C /* Tetris Swift */ = {
 			isa = PBXGroup;
 			children = (
+				04A22F742579FCA400DCEF55 /* Sounds */,
 				046FB169257887550066D9F0 /* Scene */,
 				04FF045E2575F20F009BF942 /* ButtonsFunctions */,
 				04CE0EBA2574B67F0048846C /* Model */,
@@ -100,6 +128,7 @@
 				04CE0E9D2574AEAF0048846C /* Main.storyboard */,
 				04CE0EA02574AEAF0048846C /* Assets.xcassets */,
 				04CE0EA22574AEAF0048846C /* Info.plist */,
+				04A22F80257A001500DCEF55 /* Fire.sks */,
 			);
 			path = "Tetris Swift";
 			sourceTree = "<group>";
@@ -200,8 +229,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A22F81257A001500DCEF55 /* Fire.sks in Resources */,
 				04CE0E9F2574AEAF0048846C /* Main.storyboard in Resources */,
+				04A22F7D2579FCB700DCEF55 /* delete.wav in Resources */,
+				04A22F7B2579FCB700DCEF55 /* down.mp3 in Resources */,
 				046FB16F257887BF0066D9F0 /* GameOver.sks in Resources */,
+				04A22F7C2579FCB700DCEF55 /* bg_sound.mp3 in Resources */,
+				04A22F7E2579FCB700DCEF55 /* move.mp3 in Resources */,
+				04A22F7A2579FCB700DCEF55 /* rotation.mp3 in Resources */,
 				04CE0EA12574AEAF0048846C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,6 +263,7 @@
 				046FB177257890520066D9F0 /* NextBrick.swift in Sources */,
 				04CE0EB12574B0190048846C /* Variables.swift in Sources */,
 				04CE0EB52574B0A40048846C /* RandomBrick.swift in Sources */,
+				04A22F712579FC7A00DCEF55 /* Sound.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

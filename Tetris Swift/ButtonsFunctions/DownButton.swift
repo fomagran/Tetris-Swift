@@ -100,6 +100,9 @@ class DownButton {
                 Variables.backArrays.remove(at: y)
                 Variables.backArrays.insert([2,0,0,0,0,0,0,0,0,2], at: 1)
                 
+                //삭제 효과음
+                Variables.blockedArrays.first?.run(SKAction.playSoundFileNamed("delete.wav", waitForCompletion: false))
+                
                 let yValue = y*Variables.brickValue.brickSize + Int(Variables.startPoint.y)
                 for item in Variables.blockedArrays {
                     //같은 라인에 있는 벽이된 블록들을 삭제
