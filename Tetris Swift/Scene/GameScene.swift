@@ -53,6 +53,15 @@ class GameScene: SKScene {
         sound = Sound()
     }
     
+    //배경화면에 조명효과주는 함수
+    func lightEffect() {
+        let light = SKLightNode()
+        light.position = CGPoint(x: Int(view!.frame.width)/2, y: -100)
+        light.ambientColor = .white
+        light.categoryBitMask = 0b0001
+        addChild(light)
+    }
+    
     //MARK:Actions
     override  func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
