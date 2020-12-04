@@ -70,11 +70,11 @@ class GameScene: SKScene {
                 rotationBtn?.brickRotation()
                 sound?.buttonSounds(buttonName: "rotation")
             }else if item.name == "down"{
-                sound?.buttonSounds(buttonName: "down")
                 //블록 내리기 누르면 한방에 내려가게 하기
                 while (downBtn?.isDownable())! {
                     downBtn?.brickDown()
                 }
+                sound?.buttonSounds(buttonName: "down")
               
             }else if item.name == "stop" {
                 stopBtn?.brickStop()

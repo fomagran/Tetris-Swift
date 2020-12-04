@@ -22,6 +22,7 @@ class Sound {
                 print("DEBUG:Failed load url of sound")
             }
             bgm.volume = 0.5
+            //무한반복
             bgm.numberOfLoops = -1
             bgm.play()
         }
@@ -34,8 +35,9 @@ class Sound {
             }catch {
                 print("DEBUG:Failed load url of sound")
             }
-            buttonSound.volume = 0.5
-            buttonSound.numberOfLoops = -1
+            buttonSound.volume = 1
+            //반복없이 하려면 0으로 해줘야함
+            buttonSound.numberOfLoops = 0
             buttonSound.play()
         }
     }
