@@ -98,6 +98,14 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		04A22F83257A00F500DCEF55 /* Effection */ = {
+			isa = PBXGroup;
+			children = (
+				04A22F80257A001500DCEF55 /* Fire.sks */,
+			);
+			path = Effection;
+			sourceTree = "<group>";
+		};
 		04CE0E872574AEAF0048846C = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +125,7 @@
 		04CE0E922574AEAF0048846C /* Tetris Swift */ = {
 			isa = PBXGroup;
 			children = (
+				04A22F83257A00F500DCEF55 /* Effection */,
 				04A22F742579FCA400DCEF55 /* Sounds */,
 				046FB169257887550066D9F0 /* Scene */,
 				04FF045E2575F20F009BF942 /* ButtonsFunctions */,
@@ -128,7 +137,6 @@
 				04CE0E9D2574AEAF0048846C /* Main.storyboard */,
 				04CE0EA02574AEAF0048846C /* Assets.xcassets */,
 				04CE0EA22574AEAF0048846C /* Info.plist */,
-				04A22F80257A001500DCEF55 /* Fire.sks */,
 			);
 			path = "Tetris Swift";
 			sourceTree = "<group>";

@@ -95,6 +95,7 @@ class DownButton {
             set.insert(y)
         }
         for y in set.sorted() {
+            let yValue = y * Variables.brickValue.brickSize + Int(Variables.startPoint.y)
             //가져온 y행에서 0값이 있는지 확인
             if !Variables.backArrays[y].contains(0) {
                 Variables.backArrays.remove(at: y)
@@ -102,7 +103,8 @@ class DownButton {
                 
                 //삭제 효과음
                 Variables.blockedArrays.first?.run(SKAction.playSoundFileNamed("delete.wav", waitForCompletion: false))
-                
+                //파이어 파티클 효과
+                fire(position: CGPoint(x: Int(Variables.scene.frame.width/2), y: -yValue))
                 let yValue = y*Variables.brickValue.brickSize + Int(Variables.startPoint.y)
                 for item in Variables.blockedArrays {
                     //같은 라인에 있는 벽이된 블록들을 삭제
@@ -155,5 +157,17 @@ class DownButton {
             }
             return false
         }
+    }
+    
+    //파티클 효과
+    func fire(position:CGPoint) {
+        let fire = SKEmitterNode(fileNamed: "Fire.sks")
+        fire?.particlePosition = position
+        fire?.particlePositionRange = CGVector(dx: Int(Variables.scene.frame.width) - Variables.brickValue.brickSize * 2, dy: Variables.brickValue.brickSize)
+        Variables.scene.addChild(fire!)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            fire?.removeFromParent()
+        }
+        //z포지션 2로 올려줘야 조금 더 나은 효과로 보임
     }
 }
